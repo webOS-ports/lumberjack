@@ -19,7 +19,7 @@ endif
 endif
 
 CPPFLAGS := -g -DVERSION=\"${VERSION}\" -I${STAGING_DIR}/usr/include/glib-2.0 -I${STAGING_DIR}/usr/lib/glib-2.0/include -I${STAGING_DIR}/usr/include
-LDFLAGS  := -g -L${STAGING_DIR}/usr/lib -llunaservice -lmjson -lglib-2.0 -lpthread
+LDFLAGS  := -g -L${STAGING_DIR}/usr/lib -llunaservice -ljson-c -lglib-2.0 -lpthread
 
 lumberjack: lumberjack.o luna_service.o luna_methods.o
 

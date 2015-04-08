@@ -23,6 +23,8 @@
 #include <pthread.h>
 #include <syslog.h>
 
+#include <json.h>
+
 #include "luna_service.h"
 #include "luna_methods.h"
 
@@ -375,9 +377,9 @@ bool setLogging_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
   char command[MAXLINLEN];
 
   // Extract the context argument from the message
-  json_t *object = json_parse_document(LSMessageGetPayload(message));
-  json_t *context = json_find_first_label(object, "context");
-  if (!context || (context->child->type != JSON_STRING) || (strspn(context->child->text, ALLOWED_CHARS) != strlen(context->child->text))) {
+  json_object *object = json_tokener_parse(LSMessageGetPayload(message));
+  json_object *context = json_object_object_get(object, "context");
+  if (!context || !json_object_is_type(context, json_type_string) || (strspn(json_object_get_string(context), ALLOWED_CHARS) != strlen(json_object_get_string(context)))) {
     if (!LSMessageReply(lshandle, message,
 			"{\"returnValue\": false, \"errorCode\": -1, \"errorText\": \"Invalid or missing context\"}",
 			&lserror)) goto error;
@@ -385,8 +387,8 @@ bool setLogging_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
   }
 
   // Extract the level argument from the message
-  json_t *level = json_find_first_label(object, "level");
-  if (!level || (level->child->type != JSON_STRING) || (strspn(level->child->text, ALLOWED_CHARS) != strlen(level->child->text))) {
+  json_object *level = json_object_object_get(object, "level");
+  if (!level || (!json_object_is_type(level, json_type_string)) || (strspn(json_object_get_string(level), ALLOWED_CHARS) != strlen(json_object_get_string(level)))) {
     if (!LSMessageReply(lshandle, message,
 			"{\"returnValue\": false, \"errorCode\": -1, \"errorText\": \"Invalid or missing level\"}",
 			&lserror)) goto error;
@@ -394,7 +396,7 @@ bool setLogging_method(LSHandle* lshandle, LSMessage *message, void *ctx) {
   }
 
   // Store the command, so it can be used in the error report if necessary
-  sprintf(command, "PmLogCtl set %s %s 2>&1", context->child->text, level->child->text);
+  sprintf(command, "PmLogCtl set %s %s 2>&1", json_object_get_string(context), json_object_get_string(level));
   
   return simple_command(lshandle, message, command);
 
