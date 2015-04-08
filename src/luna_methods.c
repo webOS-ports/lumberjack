@@ -23,6 +23,8 @@
 #include <pthread.h>
 #include <syslog.h>
 
+#include <json.h>
+
 #include "luna_service.h"
 #include "luna_methods.h"
 
