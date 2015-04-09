@@ -1,9 +1,9 @@
 {
 	"title": "Lumberjack",
-	"id": "org.webosinternals.lumberjack",
-	"version": "0.5.0",
-	"release_date":	"11-November-2010",
-	"vendor": "WebOS Internals",
+	"id": "org.webosports.lumberjack",
+	"version": "0.1.0",
+	"release_date":	"09-Apr-2015",
+	"vendor": "WebOS Ports",
 	"vendor_email":	"support@webos-internals.org",
 	"vendor_url": "http://www.webos-internals.org/wiki/Application:Lumberjack",
 	"type": "web",

@@ -1,3 +1,3 @@
 [D-BUS Service]
 Name=org.webosports.lumberjack
-Exec=/usr/sbin/lumberjack
+Exec=/var/usr/sbin/org.webosports.lumberjack

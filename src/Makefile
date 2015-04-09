@@ -26,9 +26,9 @@ lumberjack: lumberjack.o luna_service.o luna_methods.o
 HOST = cdma-pre
 
 install: lumberjack
-#	- ssh root@${HOST} killall org.webosinternals.lumberjack
-#	scp lumberjack root@${HOST}:/var/usr/sbin/org.webosinternals.lumberjack.new
-#	ssh root@${HOST} mv /var/usr/sbin/org.webosinternals.lumberjack.new /var/usr/sbin/org.webosinternals.lumberjack
+#	- ssh root@${HOST} killall org.webosports.lumberjack
+#	scp lumberjack root@${HOST}:/var/usr/sbin/org.webosports.lumberjack.new
+#	ssh root@${HOST} mv /var/usr/sbin/org.webosports.lumberjack.new /var/usr/sbin/org.webosports.lumberjack
 	novacom put file://home/root/luna_methods.c < luna_methods.c
 	novacom put file://home/root/lumberjack < lumberjack
 

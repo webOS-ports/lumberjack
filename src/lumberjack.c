@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
   if (getopts(argc, argv) == 1)
     return 1;
 
-  if (luna_service_initialize("org.webosinternals.lumberjack"))
+  if (luna_service_initialize("org.webosports.lumberjack"))
     luna_service_start();
 
   return 0;

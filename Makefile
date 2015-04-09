@@ -1,4 +1,4 @@
-APPID = org.webosinternals.lumberjack
+APPID = org.webosports.lumberjack
 
 package: clean
 	cd src && ${MAKE} DEVICE=1

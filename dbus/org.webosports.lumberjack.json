@@ -1,6 +1,6 @@
 {
   "role": {
-     "exeName":"/usr/sbin/lumberjack",
+     "exeName":"/var/usr/sbin/org.webosports.lumberjack",
      "type": "regular",
      "allowedNames": ["org.webosports.lumberjack"]
   },

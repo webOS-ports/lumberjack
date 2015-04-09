@@ -1,6 +1,6 @@
 #!/bin/sh                                                                                       
 
-SID="org.webosinternals.lumberjack"
+SID="org.webosports.lumberjack"
 
 APPS=/media/cryptofs/apps
 
