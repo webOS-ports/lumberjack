@@ -1,6 +1,6 @@
 {
 	"title": "Lumberjack",
-	"id": "org.webosports.lumberjack",
+	"id": "org.webosports.app.lumberjack",
 	"version": "0.1.0",
 	"release_date":	"09-Apr-2015",
 	"vendor": "WebOS Ports",
