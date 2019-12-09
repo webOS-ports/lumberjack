@@ -1,4 +1,4 @@
-LumberjackService.identifier = 'palm://org.webosinternals.lumberjack';
+LumberjackService.identifier = 'palm://org.webosports.service.lumberjack';
 
 //												  Context 'BluetoothMonitor' = debug
 LumberjackService.getLoggingRegExp = new RegExp(/^Context '([^']*)' = (.*)$/);

@@ -17,7 +17,7 @@ tailHandler.LogDateRegExp =		new RegExp(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}
 tailHandler.LogRegExpEvery =	new RegExp(/^([^\s]*) \[(.*)\] (?:[^\s]*) ([^\.]*).([^\s]*) ([^:]*): (.*)$/);
 // (alert)					2010-08-15T02:32:37.110778Z [178667] palm-webos-device user.warning LunaSysMgr: {LunaSysMgrJS}: start
 tailHandler.LogRegExpAlert =	new RegExp(/^([^\s]*) \[(.*)\] (?:[^\s]*) user.warning LunaSysMgr: {LunaSysMgrJS}: (.*)$/);
-// (mojo.log)				2010-08-15T01:47:25.448852Z [175956] palm-webos-device user.notice LunaSysMgr: {LunaSysMgrJS}: org.webosinternals.lumberjack: Info: start, palmInitFramework346:2520
+// (mojo.log)				2010-08-15T01:47:25.448852Z [175956] palm-webos-device user.notice LunaSysMgr: {LunaSysMgrJS}: org.webosports.service.lumberjack: Info: start, palmInitFramework346:2520
 tailHandler.LogRegExpMojo =		new RegExp(/^([^\s]*) \[(.*)\] (?:[^\s]*) user.([^\s]*) LunaSysMgr: {LunaSysMgrJS}: ([^:]*): ([^:]*): (.*)$/);
 
 

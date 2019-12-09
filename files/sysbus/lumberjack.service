@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.webosports.lumberjack
-Exec=/usr/sbin/lumberjack

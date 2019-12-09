@@ -1,0 +1,12 @@
+{
+    "exeName":"@WEBOS_INSTALL_SBINDIR@/lumberjack",
+    "type": "regular",
+    "allowedNames": ["org.webosports.service.lumberjack"],
+    "permissions": [
+    {
+        "service":"org.webosports.service.lumberjack",
+        "inbound":["*"],
+        "outbound":["*"]
+    }
+  ]
+}
